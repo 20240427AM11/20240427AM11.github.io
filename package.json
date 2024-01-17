@@ -7,8 +7,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "next build && next export && touch out/.nojekyll && git add -f out/ && git commit -m 'deploy' && git push"
+    "lint": "next lint"
   },
   "dependencies": {
     "react": "^18",
