@@ -35,7 +35,7 @@ jobs:
         env:
           PASSWORD: ${{ secrets.PASSWSORD }}
 
-            - name: Install Dependencies and Build
+            - name: Install Dependencies 
               run: |
                 yarn install
                 yarn build && touch ./out/.nojekyll
