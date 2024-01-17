@@ -35,9 +35,10 @@ jobs:
         env:
           PASSWORD: ${{ secrets.PASSWSORD }}
 
-      #      - name: Install Dependencies and Surge
-      #        run: |
-      #          npm install
+            - name: Install Dependencies and Build
+              run: |
+                yarn install
+                yarn build && touch ./out/.nojekyll
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
