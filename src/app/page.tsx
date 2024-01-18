@@ -87,7 +87,7 @@ export default function Home() {
         </div>
       </Section>
       <Section border>
-        <Calendar />
+        <Calendar year={2024} month={4} day={27} />
       </Section>
       {/* <div className="w-full h-32 bg-[#fffaee]"></div> */}
     </main>
