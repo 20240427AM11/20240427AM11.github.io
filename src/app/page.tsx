@@ -1,10 +1,12 @@
 import Image from "next/image";
-import localFont from 'next/font/local';
+import localFont from "next/font/local";
 import Section from "@/components/Section";
 import Contact from "@/components/Contact";
 import Calendar from "@/components/Calendar";
 
-const seoulFont = localFont({ src: '../../public/fonts/SeoulHangangJungL.woff2'});
+const seoulFont = localFont({
+  src: "../../public/fonts/SeoulHangangJungL.woff2",
+});
 
 export default function Home() {
   return (
