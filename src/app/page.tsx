@@ -1,8 +1,8 @@
-import Calendar from "@/components/calendar";
-import { Contact, ContactWrapper } from "@/components/contact";
+import Calendar from "@/components/calendar_";
+import { Contact, ContactWrapper } from "@/components/contact_";
 import Gallery from "@/components/gallery";
 import Map from "@/components/map";
-import Section from "@/components/section";
+import Section from "@/components/section_";
 import localFont from "next/font/local";
 import Image from "next/image";
 
