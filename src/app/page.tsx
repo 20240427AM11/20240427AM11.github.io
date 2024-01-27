@@ -1,10 +1,10 @@
-import Image from "next/image";
-import localFont from "next/font/local";
-import Section from "@/components/section";
-import { Contact, ContactWrapper } from "@/components/contact";
 import Calendar from "@/components/calendar";
+import { Contact, ContactWrapper } from "@/components/contact";
 import Gallery from "@/components/gallery";
 import Map from "@/components/map";
+import Section from "@/components/section";
+import localFont from "next/font/local";
+import Image from "next/image";
 
 const seoulFont = localFont({
   src: "../../public/fonts/SeoulHangangJungL.woff2",
