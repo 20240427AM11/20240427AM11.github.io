@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+import { Section, SectionHeader, SectionTitle } from "@/types/section";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 
@@ -5,62 +7,42 @@ const muncheWriteFont = localFont({
   src: "../../public/fonts/munche_seuki_jung.woff2",
 });
 
-const SectionTitle = ({ title }: { title?: String }) => {
+const SectionTitle = ({ title }: SectionTitle) => {
+  return (
+    <div className="pb-[50px] pt-[60px] text-center text-xl font-medium leading-[22px]">
+      {title && <div className={`text-[#333333]`}>{title}</div>}
+    </div>
+  );
+};
+
+const SectionHeader = ({ clean }: SectionHeader): ReactNode => {
   return (
     <div
-      className={`text-xl font-medium ${
-        title ? "pt-10" : "pt-[46px]"
-      } pb-[30px] text-center`}
-    >
-      <div
-        className={`bg-[url('/images/skin/title_image.png')] bg-center bg-no-repeat bg-[length:38px_56px] h-[70px] ${
-          title ? "mb-2.5" : ""
-        }`}
-      />
-      {title && (
-        <div className={`${muncheWriteFont.className} text-[#534741]`}>
-          {title}
-        </div>
+      className={cn(
+        "flex justify-between border-solid border-[#7f838c] pb-[14px] text-xs italic leading-[13px]",
+        clean ? "border-none" : "border-b",
       )}
+    >
+      <div className="text-[#7f838c]">wedding invitation.</div>
+      <div className="text-[#7f838c]">04/27</div>
     </div>
   );
 };
 
-const SectionHeader = () => {
-  return (
-    <div className="flex justify-between italic text-xs leading-4">
-      <div className="text-[#534741]">date.</div>
-      <div className="text-[#534741]">04/27</div>
-    </div>
-  );
-};
-
-const Section = ({
-  children,
-  title,
-  odd,
-  border,
-}: {
-  children: ReactNode;
-  title?: String;
-  odd?: Boolean;
-  border?: Boolean;
-}) => {
+const Section = ({ children, title, odd, bg, clean }: Section): ReactNode => {
   return (
     <div
-      className={`${
-        odd ? "bg-[#fffef9]" : "bg-[#fffaee]"
-      } pt-[25px] pr-[33px] pl-[33px] pb-[43px]`}
+      className={cn(
+        "px-[35px] pb-16 pt-[25px]",
+        odd ? "bg-[#ffffff]" : "bg-[#fdf8f4]",
+        bg
+          ? "bg-[#fdf8f4] bg-[url(/images/skin/calendar.jpg)] bg-[length:600px] bg-[position:center_15%] bg-no-repeat"
+          : "",
+      )}
     >
-      <SectionHeader />
-      <div
-        className={`${
-          border
-            ? "border border-solid border-[#fece75] rounded-t-[150px] -mt-2.5 px-[15px]"
-            : ""
-        }`}
-      >
-        <SectionTitle title={title} />
+      <SectionHeader clean={clean} />
+      <div>
+        {title && <SectionTitle title={title} />}
         {children}
       </div>
     </div>
