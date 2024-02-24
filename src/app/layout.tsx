@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./globals.css";
 
-const KAKAO_API_KEY = process.env.KAKAO_API_KEY;
+const KAKAO_API_KEY = "5f8b6bba55ab75fed47446bfc37c2e52";
 
 const inter = Inter({ subsets: ["latin"] });
 
