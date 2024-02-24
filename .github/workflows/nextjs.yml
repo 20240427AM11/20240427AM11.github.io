@@ -74,7 +74,7 @@ jobs:
             - name: Generate Environment Variables File for Production
       - name: Set Environment Variables And Secrets
         run: |
-          echo "PASSWORD=$PASSWORD" >> .env.production
+          echo "KAKAO_API_KEY=$KAKAO_API_KEY" >> .env.production
         env:
           KAKAO_API_KEY: ${{ secrets.KAKAO_API_KEY }}
       - name: Install dependencies
