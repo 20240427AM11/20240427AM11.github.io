@@ -1,8 +1,11 @@
-import Calendar from "@/components/calendar_";
-import { Contact, ContactWrapper } from "@/components/contact_";
+import Account from "@/components/account";
+import Calendar from "@/components/calendar";
+import { Contact, ContactWrapper } from "@/components/contact";
 import Gallery from "@/components/gallery";
+import MainSwiper from "@/components/main-swiper";
 import Map from "@/components/map";
-import Section from "@/components/section_";
+import Notice from "@/components/notice";
+import Section from "@/components/section";
 import localFont from "next/font/local";
 import Image from "next/image";
 
@@ -15,22 +18,7 @@ export default function Home() {
     <main className={seoulFont.className}>
       <div className="w-full md:w-[375px]">
         <div className="relative aspect-[400/594] min-h-[557px] leading-[0]">
-          <div
-            id="scene_slider"
-            className="absolute -z-[1] h-[594px] w-full overflow-hidden"
-          >
-            <div
-              id="sliderContainer"
-              className="relative m-0 block h-full w-full"
-            >
-              <Image
-                className="relative float-left block"
-                alt="slider-001"
-                src="images/slider/slider_001.jpg"
-                fill
-              />
-            </div>
-          </div>
+          <MainSwiper />
           <Image
             className="w-full"
             alt="skin"
@@ -44,7 +32,7 @@ export default function Home() {
             fill
           />
         </div>
-        <Section title="초대합니다.">
+        <Section title="초대합니다." odd>
           <div className="mb-[30px] text-center text-sm leading-6 text-[#534741]">
             <p>열 번의 사계를 지나, 새로이 준비한 오늘</p>
             <br />
@@ -80,7 +68,7 @@ export default function Home() {
             </div>
           </div>
         </Section>
-        <Section title="축하 연락처" odd>
+        <Section title="축하 연락처">
           <ContactWrapper>
             <Contact name="배준오" number="01062635217" />
             <Contact name="배승환" number="01027269100" />
@@ -92,14 +80,20 @@ export default function Home() {
             <Contact name="이솜" number="01087596799" />
           </ContactWrapper>
         </Section>
-        <Section bg clean>
+        <Section bg clean odd>
           <Calendar year={2024} month={4} day={27} />
         </Section>
-        <Section title="갤러리" odd>
+        <Section title="갤러리">
           <Gallery />
         </Section>
-        <Section title="오시는 길">
+        <Section title="오시는 길" odd>
           <Map />
+        </Section>
+        <Section title="안내사항">
+          <Notice />
+        </Section>
+        <Section title="마음 전하는 곳" odd>
+          <Account />
         </Section>
       </div>
 

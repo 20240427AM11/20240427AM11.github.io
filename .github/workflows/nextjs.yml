@@ -76,7 +76,7 @@ jobs:
         run: |
           echo "PASSWORD=$PASSWORD" >> .env.production
         env:
-          PASSWORD: ${{ secrets.PASSWORD }}
+          KAKAO_API_KEY: ${{ secrets.KAKAO_API_KEY }}
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js

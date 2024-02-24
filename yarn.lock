@@ -12,17 +12,17 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
+"@babel/runtime@^7.22.15", "@babel/runtime@^7.23.7":
+  version "7.23.9"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.9.tgz#47791a15e4603bb5f905bc0753801cf21d6345f7"
+  integrity sha512-0CX6F+BI2s9dkUqr08KFrAIZgNFj75rdBU/DjCyYLIaV/quFjkk6T+EJ2LkZHyZTbEV4L5p97mNkUsHl2wLFAw==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/runtime@^7.23.2":
   version "7.23.8"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.8.tgz#8ee6fe1ac47add7122902f257b8ddf55c898f650"
   integrity sha512-Y7KbAP984rn1VGMbGqKmBLio9V7y5Je9GvU4rQPCPinCyNfUcToxIXl06d59URp/F3LwinvODxab5N/G6qggkw==
-  dependencies:
-    regenerator-runtime "^0.14.0"
-
-"@babel/runtime@^7.23.7":
-  version "7.23.9"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.9.tgz#47791a15e4603bb5f905bc0753801cf21d6345f7"
-  integrity sha512-0CX6F+BI2s9dkUqr08KFrAIZgNFj75rdBU/DjCyYLIaV/quFjkk6T+EJ2LkZHyZTbEV4L5p97mNkUsHl2wLFAw==
   dependencies:
     regenerator-runtime "^0.14.0"
 
@@ -1633,6 +1633,11 @@ json5@^1.0.2:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
+kakao.maps.d.ts@^0.1.39:
+  version "0.1.39"
+  resolved "https://registry.yarnpkg.com/kakao.maps.d.ts/-/kakao.maps.d.ts-0.1.39.tgz#dc30726531906d9c42b8f15d7404baa169b8255e"
+  integrity sha512-KXENJ8hHYtjb5G+0vf8TXx/PwWW4j5ndDiQTSMvGtF7EFWu2P3N/+Zivcj9/UKn3j29Iz/sIUaA7WL8Ug3IDGQ==
+
 keyv@^4.5.3:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.4.tgz#a879a99e29452f942439f2a405e3af8b31d4de93"
@@ -2088,6 +2093,14 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-kakao-maps-sdk@^1.1.26:
+  version "1.1.26"
+  resolved "https://registry.yarnpkg.com/react-kakao-maps-sdk/-/react-kakao-maps-sdk-1.1.26.tgz#5326e670300e8830e138f1e4b5a8db208d9bc27a"
+  integrity sha512-rzQLGVPk8LmT8ffZFiPEutQxxufH/K9ffbFgCnE9OqqfvlQ94qmBtl8s5MvTtt3noOJ3W1WBTle1B/Y+Yphuug==
+  dependencies:
+    "@babel/runtime" "^7.22.15"
+    kakao.maps.d.ts "^0.1.39"
+
 react@^18:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
@@ -2398,6 +2411,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+swiper@^11.0.6:
+  version "11.0.6"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.0.6.tgz#787187e2711b01301b4c67b86b8e03099e2fc9f2"
+  integrity sha512-W/Me7MQl5rNgdM5x9i3Gll76WsyVpnHn91GhBOyL7RCFUeg62aVnflzlVfIpXzZ/87FtJOfAoDH79ZH2Yq76zA==
 
 tailwind-merge@^2.2.1:
   version "2.2.1"

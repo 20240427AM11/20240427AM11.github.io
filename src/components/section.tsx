@@ -9,7 +9,11 @@ const muncheWriteFont = localFont({
 
 const SectionTitle = ({ title }: SectionTitle) => {
   return (
-    <div className="pb-[50px] pt-[60px] text-center text-xl font-medium leading-[22px]">
+    <div
+      className={cn(
+        "pb-[50px] pt-[60px] text-center text-xl font-medium leading-[22px]",
+      )}
+    >
       {title && <div className={`text-[#333333]`}>{title}</div>}
     </div>
   );
