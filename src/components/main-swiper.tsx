@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const MainSwiper = () => {
   return (
-    <div className="absolute -z-[1] h-[594px] w-full overflow-hidden">
+    <div className="absolute -z-[1] aspect-[400/594] w-full overflow-hidden">
       <Swiper
         modules={[EffectFade, Autoplay]}
         className="relative m-0 block h-full w-full"
