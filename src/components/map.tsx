@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { Nanum_Gothic } from "next/font/google";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import {
@@ -8,7 +9,6 @@ import {
   Map as Detail,
   MapMarker,
 } from "react-kakao-maps-sdk";
-import { Nanum_Gothic } from "next/font/google";
 
 const maps: any = {
   detail: "지도",
