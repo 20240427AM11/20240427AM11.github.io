@@ -7,11 +7,12 @@ const muncheWriteFont = localFont({
   src: "../../public/fonts/munche_seuki_jung.woff2",
 });
 
-const SectionTitle = ({ title }: SectionTitle) => {
+const SectionTitle = ({ title, sub }: SectionTitle) => {
   return (
     <div
       className={cn(
-        "pb-[50px] pt-[60px] text-center text-xl font-medium leading-[22px]",
+        "pt-[60px] text-center text-xl font-medium leading-[22px]",
+        sub ? "pb-[15px]" : "pb-[50px]",
       )}
     >
       {title && <div className={`text-[#333333]`}>{title}</div>}
@@ -33,7 +34,23 @@ const SectionHeader = ({ clean }: SectionHeader): ReactNode => {
   );
 };
 
-const Section = ({ children, title, odd, bg, clean }: Section): ReactNode => {
+const SectionSub = ({ text }: { text: string }) => {
+  return (
+    <div className="mb-[46px] text-center text-[13px] font-light leading-[22px] text-[#333333]">
+      {text}
+    </div>
+  );
+};
+
+const Section = ({
+  children,
+  title,
+  sub,
+  odd,
+  bg,
+  clean,
+  className,
+}: Section): ReactNode => {
   return (
     <div
       className={cn(
@@ -42,11 +59,13 @@ const Section = ({ children, title, odd, bg, clean }: Section): ReactNode => {
         bg
           ? "bg-[#fdf8f4] bg-[url(/images/skin/calendar.jpg)] bg-[length:600px] bg-[position:center_15%] bg-no-repeat"
           : "",
+        className,
       )}
     >
       <SectionHeader clean={clean} />
       <div>
-        {title && <SectionTitle title={title} />}
+        {title && <SectionTitle title={title} sub={sub} />}
+        {sub && <SectionSub text={sub} />}
         {children}
       </div>
     </div>

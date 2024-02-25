@@ -2,6 +2,7 @@ import Account from "@/components/account";
 import Calendar from "@/components/calendar";
 import { Contact, ContactWrapper } from "@/components/contact";
 import Gallery from "@/components/gallery";
+import Guest from "@/components/guest";
 import MainSwiper from "@/components/main-swiper";
 import Map from "@/components/map";
 import Notice from "@/components/notice";
@@ -92,8 +93,15 @@ export default function Home() {
         <Section title="안내사항">
           <Notice />
         </Section>
-        <Section title="마음 전하는 곳" odd>
+        <Section
+          title="마음 전하는 곳"
+          odd
+          sub="축하의 마음을 담아 축의금을 전달해 보세요."
+        >
           <Account />
+        </Section>
+        <Section title="축하 메시지">
+          <Guest />
         </Section>
       </div>
 

@@ -1,6 +1,6 @@
 export type Day = {
   date?: number;
-  dDay?: Boolean;
+  dDay?: boolean;
 };
 
 export type Calendar = {

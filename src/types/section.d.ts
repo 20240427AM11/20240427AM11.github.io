@@ -1,12 +1,13 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
-export type Section = {
+export interface Section extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
-  title?: String;
-  odd?: Boolean;
-  bg?: Boolean;
-  clean?: Boolean;
-};
+  title?: string;
+  odd?: boolean;
+  bg?: boolean;
+  clean?: boolean;
+  sub?: string;
+}
 
-export type SectionTitle = { title?: String };
-export type SectionHeader = { clean?: Boolean };
+export type SectionTitle = { title?: string; sub?: string };
+export type SectionHeader = { clean?: boolean };
