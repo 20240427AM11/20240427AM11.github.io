@@ -50,6 +50,8 @@ const Section = ({
   bg,
   clean,
   className,
+  header = true,
+  ...props
 }: Section): ReactNode => {
   return (
     <div
@@ -61,8 +63,9 @@ const Section = ({
           : "",
         className,
       )}
+      {...props}
     >
-      <SectionHeader clean={clean} />
+      {header && <SectionHeader clean={clean} />}
       <div>
         {title && <SectionTitle title={title} sub={sub} />}
         {sub && <SectionSub text={sub} />}

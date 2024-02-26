@@ -5,8 +5,10 @@ import Gallery from "@/components/gallery";
 import Guest from "@/components/guest";
 import MainSwiper from "@/components/main-swiper";
 import Map from "@/components/map";
+import Message from "@/components/message";
 import Notice from "@/components/notice";
 import Section from "@/components/section";
+import Share from "@/components/share";
 import localFont from "next/font/local";
 import Image from "next/image";
 
@@ -100,9 +102,13 @@ export default function Home() {
         >
           <Account />
         </Section>
-        <Section title="축하 메시지">
+        <Section id="message" title="축하 메시지">
           <Guest />
         </Section>
+        <Section title="소식공유" odd header={false}>
+          <Share />
+        </Section>
+        <Message />
       </div>
 
       {/* <div className="w-full h-32 bg-[#fffaee]"></div> */}

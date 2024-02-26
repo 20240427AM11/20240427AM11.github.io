@@ -7,6 +7,7 @@ export interface Section extends HTMLAttributes<HTMLDivElement> {
   bg?: boolean;
   clean?: boolean;
   sub?: string;
+  header?: boolean;
 }
 
 export type SectionTitle = { title?: string; sub?: string };
