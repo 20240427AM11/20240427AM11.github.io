@@ -13,6 +13,19 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "배준오 & 이지나 모바일 청첩장",
   description: "배준오 & 이지나 모바일 청첩장",
+  openGraph: {
+    title: "배준오 & 이지나 모바일 청첩장",
+    description: "2024년 04월 27일 오전 11시 홍대 아만티 호텔 예식장",
+    url: "https://20241107am11.github.io",
+    siteName: "배준오 & 이지나 모바일 청첩장",
+    images: [
+      {
+        url: "/public/images/gallery/009.jpeg",
+        width: 1280,
+        height: 853,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
