@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-deploy": "next export"
   },
   "dependencies": {
     "clsx": "^2.1.0",
