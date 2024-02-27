@@ -1,5 +1,6 @@
 "use client";
 
+import photos from "@/../public/main_photo.json";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 import { Children, ReactNode, useMemo, useState } from "react";
@@ -23,7 +24,7 @@ const PhotoGroup = ({ children }: { children: ReactNode }): ReactNode => {
   return (
     <>
       <div className="m-auto overflow-hidden pl-0.5">{renderedChildren}</div>
-      {!viewMore && (
+      {!viewMore && photos.length > 9 && (
         <div
           className="mt-5 h-[45px] w-full cursor-pointer border border-solid border-[#a7adbb] text-center"
           onClick={handleClickViewMore}

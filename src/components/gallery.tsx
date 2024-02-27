@@ -1,4 +1,4 @@
-import photos from "@/../public/photo.json";
+import photos from "@/../public/main_photo.json";
 import PhotoGroup from "@/components/photo-group";
 import { cn } from "@/lib/utils";
 import { Photo, PhotoCounterElement } from "@/types/gallery";
@@ -63,7 +63,7 @@ const Gallery = (): ReactNode => {
       <PhotoCounter />
       <PhotoGroup>
         {photos.map((photo) => (
-          <Photo key={photo} src={`/images/gallery/${photo}.jpeg`} />
+          <Photo key={photo} src={`/images/gallery/main/${photo}`} />
         ))}
       </PhotoGroup>
     </div>
