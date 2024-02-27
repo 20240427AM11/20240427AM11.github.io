@@ -11,6 +11,7 @@ const KAKAO_API_KEY = process.env.KAKAO_API_KEY;
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://20241107am11.github.io"),
   title: "배준오 & 이지나 모바일 청첩장",
   description: "배준오 & 이지나 모바일 청첩장",
   openGraph: {
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "배준오 & 이지나 모바일 청첩장",
     images: [
       {
-        url: "/images/gallery/009.jpeg",
+        url: "https://20240427am11.github.io/images/gallery/009.jpeg",
         width: 1280,
         height: 853,
       },
