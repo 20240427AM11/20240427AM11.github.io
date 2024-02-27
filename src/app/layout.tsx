@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "배준오 & 이지나 모바일 청첩장",
     images: [
       {
-        url: "/public/images/gallery/009.jpeg",
+        url: "/images/gallery/009.jpeg",
         width: 1280,
         height: 853,
       },
