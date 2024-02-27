@@ -1,6 +1,12 @@
 "use client";
 
+import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
 import { Children, ReactNode, useMemo, useState } from "react";
+
+const bookkSerifThin = localFont({
+  src: "../../public/fonts/bookk_serif_thin.ttf",
+});
 
 const PhotoGroup = ({ children }: { children: ReactNode }): ReactNode => {
   const [viewMore, setViewMore] = useState(false);
@@ -22,7 +28,14 @@ const PhotoGroup = ({ children }: { children: ReactNode }): ReactNode => {
           className="mt-5 h-[45px] w-full cursor-pointer border border-solid border-[#a7adbb] text-center"
           onClick={handleClickViewMore}
         >
-          <span className="text-[13px] leading-[45px]">더보기</span>
+          <span
+            className={cn(
+              bookkSerifThin.className,
+              "text-[13px] leading-[45px]",
+            )}
+          >
+            더보기
+          </span>
         </div>
       )}
     </>

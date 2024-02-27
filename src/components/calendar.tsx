@@ -7,6 +7,14 @@ const spoqaFont = localFont({
   src: "../../public/fonts/Spoqa Han Sans Light.woff2",
 });
 
+const bookkSerifThin = localFont({
+  src: "../../public/fonts/bookk_serif_thin.ttf",
+});
+
+const bookkGothicThin = localFont({
+  src: "../../public/fonts/bookk_gothic_thin.ttf",
+});
+
 const Day = ({ date, dDay }: Day): ReactNode => {
   return (
     <td
@@ -15,7 +23,7 @@ const Day = ({ date, dDay }: Day): ReactNode => {
     >
       <span
         className={cn(
-          "",
+          bookkGothicThin.className,
           dDay
             ? "inline-block size-[25px] rounded-full bg-[#e7b596] text-center leading-[25px] text-[#ffffff]"
             : "",
@@ -58,12 +66,17 @@ const Calendar = ({ year, month, day }: Calendar): ReactNode => {
   const weekCount: number = (firstDay + lastDate.getDate() + 6 - lastDay) / 7;
 
   return (
-    <div className="mb-5 mt-[45px] rounded-[10px] bg-[#ffffff] px-5 py-[30px]">
-      <div className="mb-[14px] text-center text-lg font-normal leading-[18px] text-[#534741]">
+    <div className="mb-5 mt-[45px] bg-[#ffffff] px-5 py-[30px] opacity-80">
+      <div
+        className={cn(
+          bookkSerifThin.className,
+          "mb-[14px] text-center text-lg font-normal leading-[18px] text-[#534741]",
+        )}
+      >
         {`${year}.${month.toString().padStart(2, "0")}`}
       </div>
       <table className="h-full w-full table-fixed border-collapse">
-        <tbody className={spoqaFont.className}>
+        <tbody className={bookkGothicThin.className}>
           <tr>
             {weekdayString.map((day) => (
               <th

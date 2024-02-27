@@ -1,6 +1,11 @@
 import { cn } from "@/lib/utils";
 import { Contact, ContactWrapper } from "@/types/contact";
+import localFont from "next/font/local";
 import { ReactNode } from "react";
+
+const bookkSerifThin = localFont({
+  src: "../../public/fonts/bookk_serif_thin.ttf",
+});
 
 const ContactWrapper = ({ children }: ContactWrapper): ReactNode => {
   return (
@@ -14,6 +19,7 @@ const Contact = ({ name, number }: Contact): ReactNode => {
   return (
     <div
       className={cn(
+        bookkSerifThin.className,
         "flex border-b border-solid border-[#80838a] last:border-none",
       )}
     >

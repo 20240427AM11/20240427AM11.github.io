@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Nanum_Gothic } from "next/font/google";
+import localFont from "next/font/local";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import {
@@ -18,6 +19,14 @@ const maps: any = {
 const gothic = Nanum_Gothic({ weight: ["400", "700"], subsets: ["latin"] });
 const markerPosition = { lat: 37.55713946226895, lng: 126.91870574516105 };
 
+const bookkSerifThin = localFont({
+  src: "../../public/fonts/bookk_serif_thin.ttf",
+});
+
+const bookkSerifBold = localFont({
+  src: "../../public/fonts/bookk_serif_bold.ttf",
+});
+
 const Map = () => {
   const [type, setType] = useState("detail");
   const [status, setStatus] = useState("lock");
@@ -28,7 +37,12 @@ const Map = () => {
   };
   return (
     <>
-      <div className="mb-5 text-center leading-[26px]">
+      <div
+        className={cn(
+          bookkSerifThin.className,
+          "mb-5 text-center leading-[26px] tracking-[0.02em]",
+        )}
+      >
         <div className="text-[#333333] underline decoration-[#797979] underline-offset-[3.5px]">
           아만티호텔 서울
         </div>
@@ -45,7 +59,8 @@ const Map = () => {
           <div
             key={map}
             className={cn(
-              "float-left w-1/2 cursor-pointer text-center",
+              bookkSerifBold.className,
+              "float-left w-1/2 cursor-pointer text-center tracking-[0.01em]",
               type === map
                 ? "bg-[#f0d0bc] text-[#ffffff]"
                 : "bg-[#f5f5f7] text-[#7f838c]",

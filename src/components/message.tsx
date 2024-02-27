@@ -1,7 +1,16 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
 import { ChangeEvent, useEffect, useState } from "react";
+
+const bookkSerifThin = localFont({
+  src: "../../public/fonts/bookk_serif_thin.ttf",
+});
+
+const bookkSerifBold = localFont({
+  src: "../../public/fonts/bookk_serif_bold.ttf",
+});
 
 const Message = () => {
   const [isOpen, setOpen] = useState(false);
@@ -82,7 +91,8 @@ const Message = () => {
             <textarea
               id="textarea"
               className={cn(
-                "box-border w-full appearance-none overflow-hidden border border-solid border-[#ececec] bg-[#f8f8f8] bg-[url(/images/icon/heart.png)] bg-[length:12px_13px] bg-[13px_11px] bg-no-repeat p-2.5 pl-[27px] text-[16px] leading-[18px]",
+                bookkSerifThin.className,
+                "box-border w-full appearance-none overflow-hidden border border-solid border-[#ececec] bg-[#f8f8f8] bg-[url(/images/icon/heart.png)] bg-[length:12px_13px] bg-[13px_11px] bg-no-repeat p-2.5 pl-[27px] text-[16px] leading-[18px] tracking-[0.02em]",
                 message ? "h-auto" : "h-10",
               )}
               rows={message.split("\n").length}
@@ -93,7 +103,8 @@ const Message = () => {
           </div>
           <div
             className={cn(
-              "cursor-pointer rounded-[20px] border border-solid p-3 text-center text-[12px] leading-none",
+              bookkSerifBold.className,
+              "cursor-pointer rounded-[20px] border border-solid p-3 text-center text-[12px] leading-none tracking-[0.01em]",
               message
                 ? "border-[#ffffff] text-[#ffffff]"
                 : "border-[#8d9398] text-[#8d9398]",

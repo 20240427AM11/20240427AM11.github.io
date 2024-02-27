@@ -9,11 +9,24 @@ import Message from "@/components/message";
 import Notice from "@/components/notice";
 import Section from "@/components/section";
 import Share from "@/components/share";
+import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 import Image from "next/image";
 
 const seoulFont = localFont({
   src: "../../public/fonts/SeoulHangangJungL.woff2",
+});
+
+const bookkSerifThin = localFont({
+  src: "../../public/fonts/bookk_serif_thin.ttf",
+});
+
+const bookkSerifBold = localFont({
+  src: "../../public/fonts/bookk_serif_bold.ttf",
+});
+
+const bookkGothicLight = localFont({
+  src: "../../public/fonts/bookk_gothic_thin.ttf",
 });
 
 export default function Home() {
@@ -36,7 +49,12 @@ export default function Home() {
           />
         </div>
         <Section title="초대합니다." odd>
-          <div className="mb-[30px] text-center text-sm leading-6 text-[#534741]">
+          <div
+            className={cn(
+              bookkSerifThin.className,
+              "mb-[30px] text-center text-sm leading-6 tracking-[0.02em] text-[#534741]",
+            )}
+          >
             <p>열 번의 사계를 지나, 새로이 준비한 오늘</p>
             <br />
             <p>이제 손을 맞잡고 나란히 걸어온</p>
@@ -46,15 +64,23 @@ export default function Home() {
             <p>준엄한 걸음을 여러분과 함께 내딛고 싶습니다.</p>
             <p>오롯이 귀한 발길을 보태어 자리를 빛내주세요.</p>
           </div>
-          <div className="mx-auto mb-5 flex flex-row items-stretch justify-center text-sm text-[#534741]">
-            <div className="flex flex-col gap-y-2.5 pr-[5px] text-right">
+          <div
+            className={cn(
+              bookkSerifThin.className,
+              "mx-auto mb-5 flex flex-row items-stretch justify-center text-sm text-[#534741]",
+            )}
+          >
+            <div className="flex flex-col gap-y-2.5 pr-[5px] text-right tracking-[0.01em]">
               <div>
                 <div>배승환</div>
                 <div>김형자</div>
               </div>
               <div>
                 <div>이성민</div>
-                <div>이솜</div>
+                <div className="flex justify-between">
+                  <span>이</span>
+                  <span>솜</span>
+                </div>
               </div>
             </div>
             <div className="flex flex-col justify-around gap-y-2.5 px-[5px]">
@@ -65,7 +91,12 @@ export default function Home() {
               <div>장남</div>
               <div>장녀</div>
             </div>
-            <div className="flex flex-col justify-around gap-y-2.5 font-bold">
+            <div
+              className={cn(
+                bookkSerifBold.className,
+                "flex flex-col justify-around gap-y-2.5 font-bold",
+              )}
+            >
               <div>배준오</div>
               <div>이지나</div>
             </div>
@@ -86,7 +117,16 @@ export default function Home() {
         <Section bg clean odd>
           <Calendar year={2024} month={4} day={27} />
         </Section>
-        <Section title="갤러리">
+        <Section
+          title="10년의 데이트"
+          sub={
+            <div className={cn(bookkGothicLight.className)}>
+              함께 걷고 웃고 손잡고 눈을 맞췄던
+              <br />
+              한강에서의 기억을 담아 보았습니다.
+            </div>
+          }
+        >
           <Gallery />
         </Section>
         <Section title="오시는 길" odd>
@@ -98,7 +138,11 @@ export default function Home() {
         <Section
           title="마음 전하는 곳"
           odd
-          sub="축하의 마음을 담아 축의금을 전달해 보세요."
+          sub={
+            <div className={cn(bookkSerifThin.className, "tracking-[0.02em]")}>
+              축하의 마음을 담아 축의금을 전달해 보세요.
+            </div>
+          }
         >
           <Account />
         </Section>

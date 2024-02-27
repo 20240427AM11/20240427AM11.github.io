@@ -6,9 +6,9 @@ export interface Section extends HTMLAttributes<HTMLDivElement> {
   odd?: boolean;
   bg?: boolean;
   clean?: boolean;
-  sub?: string;
+  sub?: string | ReactNode;
   header?: boolean;
 }
 
-export type SectionTitle = { title?: string; sub?: string };
+export type SectionTitle = { title?: string; sub?: boolean };
 export type SectionHeader = { clean?: boolean };

@@ -1,8 +1,18 @@
-import { Photo, PhotoCounterElement } from "@/types/gallery";
-import { ReactNode } from "react";
-import PhotoGroup from "@/components/photo-group";
-import Image from "next/image";
 import photos from "@/../public/photo.json";
+import PhotoGroup from "@/components/photo-group";
+import { cn } from "@/lib/utils";
+import { Photo, PhotoCounterElement } from "@/types/gallery";
+import localFont from "next/font/local";
+import Image from "next/image";
+import { ReactNode } from "react";
+
+const bookkGothicBold = localFont({
+  src: "../../public/fonts/bookk_gothic_bold.ttf",
+});
+
+const bookkGothicThin = localFont({
+  src: "../../public/fonts/bookk_gothic_thin.ttf",
+});
 
 const PhotoCounterElement = ({
   text,
@@ -10,8 +20,22 @@ const PhotoCounterElement = ({
 }: PhotoCounterElement): ReactNode => {
   return (
     <div className="mx-5 inline-block">
-      <div className="font-[arial] text-sm font-bold leading-4">{count}</div>
-      <div className="mt-1 text-sm leading-[15px] text-[#777777]">{text}</div>
+      <div
+        className={cn(
+          bookkGothicBold.className,
+          "font-[arial] text-sm font-bold leading-4",
+        )}
+      >
+        {count}
+      </div>
+      <div
+        className={cn(
+          bookkGothicThin.className,
+          "mt-1 text-sm leading-[15px] text-[#777777]",
+        )}
+      >
+        {text}
+      </div>
     </div>
   );
 };

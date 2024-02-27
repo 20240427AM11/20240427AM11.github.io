@@ -1,7 +1,12 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
 import { MouseEventHandler, useState } from "react";
+
+const bookkSerifThin = localFont({
+  src: "../../public/fonts/bookk_serif_thin.ttf",
+});
 
 function clipboard_copy(str: string) {
   var tmpTextarea = document.createElement("textarea");
@@ -118,7 +123,12 @@ const AccountRow = ({
 const Account = () => {
   return (
     <>
-      <div className="mb-[15px] border border-solid border-[#80838a]">
+      <div
+        className={cn(
+          bookkSerifThin.className,
+          "mb-[15px] border border-solid border-[#80838a] tracking-[0.01em]",
+        )}
+      >
         <AccountRow
           name="신랑 배준오"
           account="신한은행 110-258-141650"
@@ -131,7 +141,12 @@ const Account = () => {
           type="blue"
         />
       </div>
-      <div className="mb-[15px] border border-solid border-[#80838a]">
+      <div
+        className={cn(
+          bookkSerifThin.className,
+          "mb-[15px] border border-solid border-[#80838a] tracking-[0.01em]",
+        )}
+      >
         <AccountRow
           name="신부 이지나"
           account="신한은행 110-532-783052"

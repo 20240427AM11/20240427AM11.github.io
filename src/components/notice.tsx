@@ -1,3 +1,14 @@
+import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
+
+const bookkSerifBold = localFont({
+  src: "../../public/fonts/bookk_serif_bold.ttf",
+});
+
+const bookkSerifThin = localFont({
+  src: "../../public/fonts/bookk_serif_thin.ttf",
+});
+
 const NoticeRow = ({
   no,
   title,
@@ -12,8 +23,22 @@ const NoticeRow = ({
       {String(no).padStart(2, "0")}
     </div>
     <div className="ml-2.5 w-full">
-      <div className="pb-[3px] text-xs leading-none">{title}</div>
-      <div className="break-all text-xs leading-5">{content}</div>
+      <div
+        className={cn(
+          bookkSerifBold.className,
+          "pb-[3px] text-xs leading-none tracking-[0.02em]",
+        )}
+      >
+        {title}
+      </div>
+      <div
+        className={cn(
+          bookkSerifThin.className,
+          "break-all text-xs leading-5 tracking-[0.02em]",
+        )}
+      >
+        {content}
+      </div>
     </div>
   </div>
 );
