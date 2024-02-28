@@ -5,6 +5,9 @@ const nextConfig = {
     unoptimized: true,
   },
   reactStrictMode: false,
+  experimental: {
+    serverActions: {},
+  },
 };
 
 module.exports = nextConfig;
