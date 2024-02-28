@@ -71,7 +71,7 @@ const Section = ({
     <div
       className={cn(
         "px-[35px] pb-16 pt-[25px]",
-        odd ? "bg-[#ffffff]" : "bg-[#fdf8f4]",
+        odd ? "bg-[#fdf8f4]" : "bg-[#ffffff]",
         bg
           ? "bg-[#fdf8f4] bg-[url(/images/skin/calendar.jpg)] bg-cover bg-no-repeat"
           : "",

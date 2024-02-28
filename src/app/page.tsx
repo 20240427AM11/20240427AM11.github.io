@@ -152,9 +152,11 @@ export default function Home() {
         <Section title="소식공유" odd header={false}>
           <Share />
         </Section>
-        <Message />
       </div>
-
+      <div
+        id="message-shadow"
+        className="m-auto w-full bg-[rgb(33,36,45)] transition-[height] duration-700"
+      />
       {/* <div className="w-full h-32 bg-[#fffaee]"></div> */}
     </main>
   );
